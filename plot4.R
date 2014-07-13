@@ -1,5 +1,5 @@
 
-plot3 <- function(){
+plot4 <- function(){
   
   dataFile <- "household_power_consumption.txt"
   data <- read.table( dataFile, header=TRUE, sep=";", colClasses=c("character", "character", rep("numeric",7)), na="?" )
@@ -49,9 +49,8 @@ plot3 <- function(){
   legend("topright",
          col = c("black", "red", "blue"),
          c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
-         lty = c(1,1,1),
-         lwd = c(2.5,2.5),
-         box.lwd = 0)
+         lty = 1,
+         bty = "n")
   
   ## global_reactive_power: plot at 2nd row and 2nd column
   plot( dataConsidered$Time, dataConsidered$Global_reactive_power,
@@ -61,4 +60,5 @@ plot3 <- function(){
         type = "l") 
   
   dev.off()
+  
 }
