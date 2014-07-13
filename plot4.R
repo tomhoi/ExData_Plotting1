@@ -47,10 +47,11 @@ plot3 <- function(){
   
   
   legend("topright",
-         col=c("black", "red", "blue"),
+         col = c("black", "red", "blue"),
          c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
-         lty=c(1,1,1),
-         lwd=c(2.5,2.5))
+         lty = c(1,1,1),
+         lwd = c(2.5,2.5),
+         box.lwd = 0)
   
   ## global_reactive_power: plot at 2nd row and 2nd column
   plot( dataConsidered$Time, dataConsidered$Global_reactive_power,
